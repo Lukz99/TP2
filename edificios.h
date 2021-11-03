@@ -1,27 +1,23 @@
 #ifndef TP2_EDIFICIOS_H
 #define TP2_EDIFICIOS_H
 
-const std::string PATH_EDIFICIOS     = "../edificios.txt";
+const std::string PATH_EDIFICIOS = "../edificios.txt";
 
 class Edificio {
     //Atributos
 
 private:
-
     std::string nombre_edificio;
     int piedra;
     int madera;
     int metal;
     int maxima_cantidad_permitidos;
 
-    //Metodos
-
+    //Métodos
 public:
-    // PRE: Los parametros deben ser validos
+    // PRE: Los parámetros deben ser válidos
     // POST: Crea un objeto Edificio
     Edificio(std::string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
-
-
 
 };
 

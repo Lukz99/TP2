@@ -1,0 +1,4 @@
+#ifndef TP2_OBELISCO_H
+#define TP2_OBELISCO_H
+
+#endif //TP2_OBELISCO_H

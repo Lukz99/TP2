@@ -4,23 +4,26 @@
 #include "lista_materiales.h"
 #include "lista_edificios.h"
 
-
 using namespace std;
 
 void mostrar_menu() {
-    cout                                        << endl << '\t'
-    << "Menu Principal"                         << endl << endl << '\t'
-    << "1_ Listar materiales de construccion"   << endl << '\t'
-    << "2_ Construir edificio por nombre"       << endl << '\t'
-    << "3_ Listar los edificios construidos"    << endl << '\t'
-    << "4_ Listar todos los edificios"          << endl << '\t'
-    << "5_ Demoler un edificio por nombre"      << endl << '\t'
-    << "6_ Guardar y salir"                     << endl;
+
+    cout << endl << " -------- Menu Principal -------- " << endl << endl;
+    cout << "1. Construir edificio por nombre." << endl;
+    cout << "2. Listar los edificios construidos." << endl;
+    cout << "3. Listar todos los edificios." << endl;
+    cout << "4. Demoler un edificio por coordenada." << endl;
+    cout << "5. Mostrar mapa." << endl;
+    cout << "6. Consultar coordenada." << endl;
+    cout << "7. Mostrar inventario." << endl;
+    cout << "8. Recolectar recursos producidos." << endl;
+    cout << "9. Lluvia de recursos." << endl;
+    cout << "10. Guardar y salir." << endl;
 }
 
 int ingresar_opcion() {
     int opcion;
-    cout << endl << "Ingrese una opcion: ";
+    cout << endl << "Ingrese una opción: ";
     cin >> opcion;
 
     return opcion;
@@ -31,7 +34,6 @@ void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_
         case 1:
             listar_materiales(lista_materiales);
             break;
-
         case 2:
             construir_edificio(lista_edificios, lista_materiales);
             break;
