@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void cargar_edificios(Lista_Edificios* lista_edificios) {
+void Lista_Edificios::cargar_edificios(Lista_Edificios* lista_edificios) {
     lista_edificios -> cantidad_de_edificios = 0;
 
     fstream archivo_edificios(PATH_EDIFICIOS, ios::in);

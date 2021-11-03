@@ -2,9 +2,6 @@
 #define TP2_HERRAMIENTAS_H
 #include <string>
 
-const std::string PATH_MATERIALES    = "../materiales.txt";
-
-
 /*
 
 struct Material {
@@ -43,7 +40,6 @@ int ingresar_opcion();
 // Precondiciones: la opcion es valida
 // Postcondiciones: se realiza una tarea segun la opcion ingresada
 void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_edificios, int opcion);
-
 
 
 // Precondiciones: ninguna
