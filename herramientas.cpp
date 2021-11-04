@@ -3,6 +3,7 @@
 #include "herramientas.h"
 #include "lista_materiales.h"
 #include "lista_edificios.h"
+#include "clear_screen.h"
 
 using namespace std;
 
@@ -29,26 +30,47 @@ int ingresar_opcion() {
     return opcion;
 }
 
-void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_edificios, int opcion) {
-    switch (opcion) {
-        case 1:
-            listar_materiales(lista_materiales);
-            break;
-        case 2:
-            construir_edificio(lista_edificios, lista_materiales);
-            break;
-        case 3:
-            listar_edificios_construidos(lista_edificios);
-            break;
-        case 4:
-            listar_edificios(lista_edificios);
-            break;
-    }
+bool es_opcion_valida(int opcion_elegida) {
+    return (opcion_elegida >= OPCION_MINIMA && opcion_elegida <= OPCION_MAXIMA);
 }
 
-
-
-
+void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_edificios, int opcion) {
+    system(CLR_SCREEN);
+    switch (opcion) {
+        case LISTAR_MATERIALES:
+            listar_materiales();
+            break;
+        case EDIFICIOS_CONSTRUIDOS:
+            listar_edificios_construidos();
+            break;
+        case LISTAR_EDIFICIOS:
+            listar_edificios();
+            break;
+        case DEMOLER_EDIFICIO:
+            demoler_edificio();
+            break;
+        case MOSTRAR_MAPA:
+            mostrar_mapa();
+            break;
+        case CONSULTAR_COORDENADA:
+            consultar_coordenada();
+            break;
+        case MOSTRAR_INVENTARIO:
+            mostrar_inventario();
+            break;
+        case RECOLECTAR_RECURSOS:
+            recolectar_recursos();
+            break;
+        case LLUVIA_RECURSOS:
+            lluvia_recursos();
+            break;
+        case GUARDAR_Y_SALIR:
+            guardar_y_salir();
+            break;
+        default:
+            cout << "Error! Opción inválida." << endl;
+    }
+}
 
 void agregar_material(Lista_Materiales* lista_materiales, Material* material) {
     int anterior_tope = lista_materiales -> cantidad_de_materiales;

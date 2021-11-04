@@ -1,11 +1,12 @@
 #ifndef TP2_EDIFICIOS_H
 #define TP2_EDIFICIOS_H
 
+#include <string>
+
 const std::string PATH_EDIFICIOS = "../edificios.txt";
 
 class Edificio {
     //Atributos
-
 private:
     std::string nombre_edificio;
     int piedra;
@@ -20,5 +21,6 @@ public:
     Edificio(std::string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
 
 };
+
 
 #endif //TP2_EDIFICIOS_H
