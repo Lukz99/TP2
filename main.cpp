@@ -1,4 +1,5 @@
 #include <iostream>
+#include "menu.h"
 #include "herramientas.h"
 #include "materiales.h"
 #include "lista_materiales.h"
@@ -18,6 +19,8 @@ int main() {
     cargar_edificios(lista_edificios);
     cargar_ubicaciones();
     cargar_mapa();
+
+    cout << endl << "¡Bienvenido/a a Andypolis!" << endl;
 
     mostrar_menu();
     opcion = ingresar_opcion();
