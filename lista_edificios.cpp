@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "edificios.h"
+#include "edificio.h"
 #include "lista_edificios.h"
 
 using namespace std;

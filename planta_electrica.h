@@ -1,7 +1,7 @@
 #ifndef TP2_PLANTA_ELECTRICA_H
 #define TP2_PLANTA_ELECTRICA_H
 
-#include "edificios.h"
+#include "edificio.h"
 
 class PlantaElectrica : public Edificio {
     //Métodos

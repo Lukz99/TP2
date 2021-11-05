@@ -3,7 +3,7 @@
 #include "herramientas.h"
 #include "materiales.h"
 #include "lista_materiales.h"
-#include "edificios.h"
+#include "edificio.h"
 #include "lista_edificios.h"
 
 using namespace std;
@@ -12,8 +12,7 @@ int main() {
 
     Lista_Materiales* lista_materiales = new Lista_Materiales;
     Lista_Edificios* lista_edificios = new Lista_Edificios;
-
-    int opcion = 0; //CAMBIAR ESTO
+    int opcion_elegida;
 
     cargar_materiales(lista_materiales);
     cargar_edificios(lista_edificios);
@@ -22,15 +21,17 @@ int main() {
 
     cout << endl << "¡Bienvenido/a a Andypolis!" << endl;
 
-    mostrar_menu();
-    opcion = ingresar_opcion();
-
-    while (opcion != GUARDAR_Y_SALIR) {
-
-        procesar_opcion(lista_materiales, lista_edificios, opcion);
+    while (opcion_elegida != GUARDAR_Y_SALIR) {
 
         mostrar_menu();
-        opcion = ingresar_opcion();
+        opcion_elegida = ingresar_opcion();
+
+        while (!es_opcion_valida(opcion_elegida)) {
+            cout << "El número de opción ingresado no es correcto, intente nuevamente: ";
+            cin >> opcion_elegida;
+            cout << endl;
+        }
+        procesar_opcion(lista_materiales, lista_edificios, opcion_elegida);
 
     }
 
@@ -38,5 +39,6 @@ int main() {
 
     delete lista_materiales;
     delete lista_edificios;
+
     return 0;
 }

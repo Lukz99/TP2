@@ -1,7 +1,7 @@
 #ifndef TP2_ASERRADERO_H
 #define TP2_ASERRADERO_H
 
-#include "edificios.h"
+#include "edificio.h"
 
 class Aserradero : public Edificio {
     //Métodos

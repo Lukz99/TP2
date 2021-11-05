@@ -6,7 +6,6 @@
 class Lista_Materiales : public Material {
     //Atributos
 
-
 protected:
 
     Material** materiales;

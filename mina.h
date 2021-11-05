@@ -1,7 +1,7 @@
 #ifndef TP2_MINA_H
 #define TP2_MINA_H
 
-#include "edificios.h"
+#include "edificio.h"
 
 class Mina : public Edificio {
     //Métodos

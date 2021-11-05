@@ -1,6 +1,8 @@
 #ifndef TP2_MENU_H
 #define TP2_MENU_H
 
+#include "lista_edificios.h"
+
 const int LISTAR_MATERIALES = 1;
 const int OPCION_MINIMA = 1;
 const int EDIFICIOS_CONSTRUIDOS= 2;
@@ -13,6 +15,10 @@ const int RECOLECTAR_RECURSOS = 8;
 const int LLUVIA_RECURSOS = 9;
 const int GUARDAR_Y_SALIR = 10;
 const int OPCION_MAXIMA = 10;
+
+
+const std::string PATH_UBICACIONES = "../ubicaciones.txt";
+const std::string PATH_MAPA = "../mapa.txt";
 
 // Precondiciones: -
 // Postcondiciones: Se muestra el menu por pantalla.
@@ -28,11 +34,11 @@ void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_
 
 // Precondiciones:
 // Postcondiciones:
-void cargar_materiales();
+void cargar_materiales(Lista_Materiales *pMateriales);
 
 // Precondiciones:
 // Postcondiciones:
-void cargar_edificios();
+void cargar_edificios(Lista_Edificios *pEdificios);
 
 // Precondiciones:
 // Postcondiciones:

@@ -1,16 +1,15 @@
 #ifndef TP2_LISTA_EDIFICIOS_H
 #define TP2_LISTA_EDIFICIOS_H
-#include "edificios.h"
+#include "edificio.h"
 #include "lista_materiales.h"
 
 class Lista_Edificios : public Edificio {
     //Atributos
-
 private:
     Edificio** edificios;
     int cantidad_de_edificios;
 
-    //Metodos
+    //Métodos
 
 public:
     // Precondiciones: ya existe, mínimo, un edificio

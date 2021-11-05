@@ -1,5 +1,5 @@
-#ifndef TP2_EDIFICIOS_H
-#define TP2_EDIFICIOS_H
+#ifndef TP2_EDIFICIO_H
+#define TP2_EDIFICIO_H
 
 #include <string>
 
@@ -27,4 +27,4 @@ public:
 };
 
 
-#endif //TP2_EDIFICIOS_H
+#endif //TP2_EDIFICIO_H

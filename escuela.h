@@ -1,7 +1,7 @@
 #ifndef TP2_ESCUELA_H
 #define TP2_ESCUELA_H
 
-#include "edificios.h"
+#include "edificio.h"
 
 class Escuela : public Edificio {
     //Métodos

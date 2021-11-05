@@ -69,3 +69,7 @@ void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_
 bool es_opcion_valida(int opcion_elegida) {
     return (opcion_elegida >= OPCION_MINIMA && opcion_elegida <= OPCION_MAXIMA);
 }
+
+void cargar_materiales(Lista_Materiales *pMateriales) {
+
+}
