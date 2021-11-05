@@ -14,7 +14,7 @@ void Lista_Materiales::cargar_materiales(Lista_Materiales* lista_materiales) {
 
     if (!archivo_materiales.is_open()) {
         cout << "Error al abrir materiales.txt";
-    }
+    } else {
     string nombre_material, cantidad_material;
     Material* material;
 
@@ -28,6 +28,7 @@ void Lista_Materiales::cargar_materiales(Lista_Materiales* lista_materiales) {
     }
 
     archivo_materiales.close();
+    }
 }
 
 

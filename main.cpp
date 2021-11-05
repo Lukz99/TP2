@@ -4,7 +4,7 @@
 #include "materiales.h"
 #include "lista_materiales.h"
 #include "edificio.h"
-#include "lista_edificios.h"
+#include "lista_edificios.h"o
 
 using namespace std;
 

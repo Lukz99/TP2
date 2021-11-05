@@ -1,5 +1,6 @@
 #ifndef TP2_MATERIALES_H
 #define TP2_MATERIALES_H
+#include <string>
 
 const std::string PATH_MATERIALES = "../materiales.txt";
 
@@ -14,9 +15,13 @@ protected:
     //Metodos
 
 public:
+    //virtual void mostrar() = 0;
+
     // PRE: Los parametros deben ser validos
     // POST: Crea un objeto Material
     Material(std::string nombre_material, int cantidad_material);
+
+
 
 
 };

@@ -4,7 +4,7 @@
 #include "edificio.h"
 
 class PlantaElectrica : public Edificio {
-    //Métodos
+    //Metodos
 public:
     PlantaElectrica(std::string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
 };

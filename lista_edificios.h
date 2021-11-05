@@ -3,7 +3,7 @@
 #include "edificio.h"
 #include "lista_materiales.h"
 
-class Lista_Edificios : public Edificio {
+class Lista_Edificios {
     //Atributos
 private:
     Edificio** edificios;
@@ -31,6 +31,10 @@ public:
     // Precondiciones: ninguna
     // Postcondiciones: se construye un edificio, en algunos casos no es posible
     void construir_edificio(Lista_Edificios* lista_edificios, Lista_Materiales* lista_materiales);
+
+    // Pre:
+    // Post:
+    Lista_Edificios(Edificio** edificios, int cantidad_de_edificios);
 };
 
 #endif //TP2_LISTA_EDIFICIOS_H

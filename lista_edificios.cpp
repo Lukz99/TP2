@@ -30,3 +30,8 @@ void Lista_Edificios::cargar_edificios(Lista_Edificios* lista_edificios) {
     }
     archivo_edificios.close();
 }
+
+Lista_Edificios::Lista_Edificios(Edificio **edificios, int cantidad_de_edificios) {
+    this -> edificios = edificios;
+    this -> cantidad_de_edificios = cantidad_de_edificios;
+}
