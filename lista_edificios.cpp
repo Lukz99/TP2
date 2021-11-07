@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "edificio.h"
 #include "lista_edificios.h"
 
@@ -18,13 +19,9 @@ void Lista_Edificios::cargar_edificios(Lista_Edificios* lista_edificios) {
 
     while (archivo_edificios >> nombre_edificio) {
         archivo_edificios >> piedra; archivo_edificios >> madera; archivo_edificios >> metal;
-        archivo_edificios >> cantidad_construidos; archivo_edificios >> maxima_cantidad_permitidos;
-
-        edificio = new Edificio;
-        edificio -> nombre_edificio = nombre_edificio;
-        edificio -> piedra = stoi(piedra); edificio -> madera = stoi(madera); edificio -> metal = stoi(metal);
-        edificio -> cantidad_construidos = stoi(cantidad_construidos); edificio -> maxima_cantidad_permitidos = stoi(maxima_cantidad_permitidos);
-
+        archivo_edificios >> maxima_cantidad_permitidos;
+        edificio = new Edificio(nombre_edificio,stoi(piedra), stoi(madera),
+                                stoi(metal), stoi(maxima_cantidad_permitidos));
         agregar_edificio(lista_edificios, edificio);
 
     }
