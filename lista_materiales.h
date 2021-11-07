@@ -25,6 +25,11 @@ public:
     // Precondiciones: ninguna
     // Postcondiciones: se muestran por pantalla el nombre y stock de los materiales del archivo materiales.txt
     void listar_materiales(Lista_Materiales* lista_materiales);
+
+    // Constructor
+    // Precondiciones:
+    // Postcondiciones:
+    Lista_Materiales(Material** materiales, int cantidad_de_materiales);
 };
 
 

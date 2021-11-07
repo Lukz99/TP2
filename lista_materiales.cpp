@@ -42,7 +42,9 @@ void Lista_Materiales::listar_materiales(Lista_Materiales* lista_materiales) {
     }
 }
 
-Material::Material(string nombre_material, int cantidad_material){
-    this-> nombre_material = nombre_material;
-    this-> cantidad_material = cantidad_material;
+Lista_Materiales::Lista_Materiales(Material** materiales, int cantidad_de_materiales) {
+    this -> materiales = materiales;
+    this -> cantidad_de_materiales = cantidad_de_materiales;
 }
+
+

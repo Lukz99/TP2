@@ -34,11 +34,11 @@ void procesar_opcion(Lista_Materiales* lista_materiales, Lista_Edificios* lista_
 
 // Precondiciones:
 // Postcondiciones:
-void cargar_materiales(Lista_Materiales *pMateriales);
+void cargar_materiales(Lista_Materiales* puntero_materiales);
 
 // Precondiciones:
 // Postcondiciones:
-void cargar_edificios(Lista_Edificios *pEdificios);
+void cargar_edificios(Lista_Edificios* puntero_edificios);
 
 // Precondiciones:
 // Postcondiciones:

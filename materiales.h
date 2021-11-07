@@ -21,6 +21,9 @@ public:
     // POST: Crea un objeto Material
     Material(std::string nombre_material, int cantidad_material);
 
+    // Precondiciones: ninguna
+    // Postcondiciones: Destruye un objeto Material
+    ~Material();
 
 
 

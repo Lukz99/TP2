@@ -4,14 +4,14 @@
 #include "materiales.h"
 #include "lista_materiales.h"
 #include "edificio.h"
-#include "lista_edificios.h"o
+#include "lista_edificios.h"
 
 using namespace std;
 
 int main() {
 
-    Lista_Materiales* lista_materiales = new Lista_Materiales;
-    Lista_Edificios* lista_edificios = new Lista_Edificios;
+    Lista_Materiales* lista_materiales; // = new Lista_Materiales;
+    Lista_Edificios* lista_edificios; // = new Lista_Edificios;
     int opcion_elegida;
 
     cargar_materiales(lista_materiales);
