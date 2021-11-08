@@ -14,8 +14,8 @@ int main() {
     Lista_Edificios* lista_edificios; // = new Lista_Edificios;
     int opcion_elegida;
 
-    cargar_materiales(lista_materiales);
-    cargar_edificios(lista_edificios);
+    lista_materiales -> cargar_materiales(lista_materiales);
+    lista_edificios -> cargar_edificios(lista_edificios);
     cargar_ubicaciones();
     cargar_mapa();
 

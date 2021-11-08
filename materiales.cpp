@@ -7,6 +7,4 @@ Material::Material(string nombre_material, int cantidad_material) {
     this-> cantidad_material = cantidad_material;
 }
 
-Material::~Material() {
-
-}
+Material::~Material() {}

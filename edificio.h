@@ -4,6 +4,7 @@
 #include <string>
 
 const std::string PATH_EDIFICIOS = "../edificios.txt"; //Agregarlo a herramientas.h o menu.h?
+
 const int MATERIAL_PRODUCIDO_MINA = 15;
 const int MATERIAL_PRODUCIDO_ASERRADERO = 25;
 const int MATERIAL_PRODUCIDO_FABRICA = 40;

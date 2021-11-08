@@ -6,18 +6,17 @@
 using namespace std;
 
 void Lista_Materiales::cargar_materiales(Lista_Materiales* lista_materiales) {
+
     lista_materiales -> cantidad_de_materiales = 0;
 
-
     fstream archivo_materiales(PATH_MATERIALES, ios::in);
-
 
     if (!archivo_materiales.is_open()) {
         cout << "Error al abrir materiales.txt";
     } else {
+
     string nombre_material, cantidad_material;
     Material* material;
-
 
     while (archivo_materiales >> nombre_material) {
         archivo_materiales >> cantidad_material;
@@ -47,4 +46,20 @@ Lista_Materiales::Lista_Materiales(Material** materiales, int cantidad_de_materi
     this -> cantidad_de_materiales = cantidad_de_materiales;
 }
 
+void Lista_Materiales::agregar_material(Lista_Materiales* lista_materiales, Material* material){
 
+    int anterior_tope = lista_materiales -> cantidad_de_materiales;
+    Material** nuevo_vector_materiales = new Material*[anterior_tope + 1];
+
+    for(int i = 0; i < lista_materiales -> cantidad_de_materiales; i++){
+        nuevo_vector_materiales[i] = lista_materiales -> materiales[i];
+    }
+    nuevo_vector_materiales[anterior_tope] = material;
+
+    if(lista_materiales -> cantidad_de_materiales != 0){
+        delete[] lista_materiales -> materiales;
+    }
+
+    lista_materiales -> materiales = nuevo_vector_materiales;
+    lista_materiales -> cantidad_de_materiales++;
+}

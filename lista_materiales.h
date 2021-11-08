@@ -3,10 +3,10 @@
 #include "materiales.h"
 
 
-class Lista_Materiales : public Material {
+class Lista_Materiales {
     //Atributos
 
-protected:
+private:
 
     Material** materiales;
     int cantidad_de_materiales;

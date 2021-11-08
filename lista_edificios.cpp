@@ -7,6 +7,7 @@
 using namespace std;
 
 void Lista_Edificios::cargar_edificios(Lista_Edificios* lista_edificios) {
+
     lista_edificios -> cantidad_de_edificios = 0;
 
     fstream archivo_edificios(PATH_EDIFICIOS, ios::in);
@@ -14,7 +15,7 @@ void Lista_Edificios::cargar_edificios(Lista_Edificios* lista_edificios) {
     if(!archivo_edificios.is_open()) {
         cout << "Error al abrir edificios.txt";
     }
-    string nombre_edificio, piedra, madera, metal, cantidad_construidos, maxima_cantidad_permitidos;
+    string nombre_edificio, piedra, madera, metal, maxima_cantidad_permitidos;
     Edificio* edificio;
 
     while (archivo_edificios >> nombre_edificio) {
