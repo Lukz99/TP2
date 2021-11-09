@@ -1,5 +1,5 @@
-#ifndef TP2_OBELISCO_H
-#define TP2_OBELISCO_H
+#ifndef OBELISCO_H
+#define OBELISCO_H
 
 #include "edificio.h"
 
@@ -9,4 +9,4 @@ public:
     Obelisco(std::string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
 };
 
-#endif //TP2_OBELISCO_H
+#endif

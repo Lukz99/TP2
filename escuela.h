@@ -1,6 +1,6 @@
-#ifndef TP2_ANDYPOLIS_APU_LED_ESCUELA_H
-#define TP2_ANDYPOLIS_APU_LED_ESCUELA_H
-#include "Edificio.h"
+#ifndef ESCUELA_H
+#define ESCUELA_H
+#include "edificio.h"
 
 class Escuela : public Edificio {
     // Atributos
@@ -9,4 +9,4 @@ private:
 };
 
 
-#endif //TP2_ANDYPOLIS_APU_LED_ESCUELA_H
+#endif

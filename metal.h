@@ -1,5 +1,5 @@
-#ifndef TP2_METAL_H
-#define TP2_METAL_H
+#ifndef METAL_H
+#define METAL_H
 #include "materiales.h"
 
 class Metal : public Material {
@@ -13,4 +13,4 @@ public:
 };
 
 
-#endif //TP2_METAL_H
+#endif

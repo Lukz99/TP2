@@ -1,5 +1,5 @@
-#ifndef TP2_CASILLERO_H
-#define TP2_CASILLERO_H
+#ifndef CASILLERO_H
+#define CASILLERO_H
 
 class Casillero {
     //Atributos
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //TP2_CASILLERO_H
+#endif

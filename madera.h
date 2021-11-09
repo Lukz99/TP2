@@ -1,5 +1,5 @@
-#ifndef TP2_MADERA_H
-#define TP2_MADERA_H
+#ifndef MADERA_H
+#define MADERA_H
 #include "materiales.h"
 
 class Madera : public Material {
@@ -13,4 +13,4 @@ public:
 };
 
 
-#endif //TP2_MADERA_H
+#endif

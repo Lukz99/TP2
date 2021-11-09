@@ -1,4 +1,4 @@
-#include "Edificio.h"
+#include "edificio.h"
 #include <string>
 
 using namespace std;

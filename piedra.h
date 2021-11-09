@@ -1,5 +1,5 @@
-#ifndef TP2_PIEDRA_H
-#define TP2_PIEDRA_H
+#ifndef PIEDRA_H
+#define PIEDRA_H
 #include "materiales.h"
 
 class Piedra : public Material {
@@ -16,4 +16,4 @@ public:
 };
 
 
-#endif //TP2_PIEDRA_H
+#endif

@@ -1,5 +1,5 @@
-#ifndef TP2_MINA_H
-#define TP2_MINA_H
+#ifndef MINA_H
+#define MINA_H
 
 #include "edificio.h"
 
@@ -9,4 +9,4 @@ public:
     Mina(std::string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
 };
 
-#endif //TP2_MINA_H
+#endif
