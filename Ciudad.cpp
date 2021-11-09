@@ -10,16 +10,16 @@ Ciudad :: Ciudad(){
 }
 
 void Ciudad :: mostrarMateriales(){
-    cout << endl << "======================" << endl << endl;
+    cout << endl << "--------------------" << endl << endl;
     cout << "Materiales de construccion: " << endl;
     for (int i = 0; i < this -> cantidadMateriales; i++) {
         cout << "# " << this -> materiales[i]-> verNombreMaterial() << " - " << this -> materiales[i] -> verCantidad() << endl;
     }
-    cout << endl << "======================" << endl << endl;
+    cout << endl << "--------------------" << endl << endl;
 }
 
 void Ciudad :: mostrarEdificiosConstruidos() {
-    cout << endl << "======================" << endl << endl;
+    cout << endl << "--------------------" << endl << endl;
     cout << "Edificios construidos: " << endl;
 
     if(! this -> cantidadEdificios) cout << "No hay edificios construidos :(" << endl;
@@ -33,12 +33,12 @@ void Ciudad :: mostrarEdificiosConstruidos() {
     cout << endl << "--------------------" << endl << endl;
 }
 
-void Ciudad ::mostrarEdificios() {
+void Ciudad :: mostrarEdificios() {
     cout << endl << "--------------------" << endl << endl;
     cout << "Edificios: " << endl;
 
     for(int i = 0; i < this->cantidadEdificios; i++){
-        cout << "-> " << (i+1) << ": " << this->edificios[i]->verNombreEdificio() << endl;
+        cout << "-> " << (i+1) << ": " << this -> edificios[i] -> verNombreEdificio() << endl;
         cout << "Construidos: " << this -> edificios[i]-> verCantidad() << " (";
         cout << (this -> edificios[i] -> verMaximo() - this -> edificios[i] -> verCantidad()) << " para el maximo permitido) " << endl;
         cout << endl;
