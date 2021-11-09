@@ -1,12 +1,12 @@
-#ifndef TP2_ESCUELA_H
-#define TP2_ESCUELA_H
-
-#include "edificio.h"
+#ifndef TP2_ANDYPOLIS_APU_LED_ESCUELA_H
+#define TP2_ANDYPOLIS_APU_LED_ESCUELA_H
+#include "Edificio.h"
 
 class Escuela : public Edificio {
-    //Métodos
-public:
-    Escuela(std::string nombre_edificio, int piedra, int madera, int metal, int maxima_cantidad_permitidos);
+    // Atributos
+private:
+    string name = "escuela";
 };
 
-#endif //TP2_ESCUELA_H
+
+#endif //TP2_ANDYPOLIS_APU_LED_ESCUELA_H
