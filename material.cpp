@@ -1,4 +1,4 @@
-#include "Material.h"
+#include "material.h"
 #include <string>
 
 using namespace std;
@@ -11,11 +11,11 @@ Material :: Material(string nombreMaterial, int cantidad) {
 Material :: ~Material() {}
 
 string Material :: verNombreMaterial() {
-    return this-> nombreMaterial;
+    return this -> nombreMaterial;
 }
 
 int Material :: verCantidad() {
-    return this->cantidad;
+    return this -> cantidad;
 }
 
 void Material :: incrementarCantidad() {
@@ -23,7 +23,7 @@ void Material :: incrementarCantidad() {
 }
 
 void Material :: incrementarCantidad(int cantidad) {
-    this -> cantidad = this -> cantidad + cantidad;
+    this -> cantidad += cantidad;
 }
 
 void Material :: decrementarCantidad() {
@@ -31,6 +31,5 @@ void Material :: decrementarCantidad() {
 }
 
 void Material :: decrementarCantidad(int cantidad) {
-    this -> cantidad = this -> cantidad - cantidad;
-}
+    this -> cantidad -= cantidad;
 

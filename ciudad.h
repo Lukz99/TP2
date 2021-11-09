@@ -1,15 +1,15 @@
 #ifndef CIUDAD_H
 #define CIUDAD_H
 
-#include "Material.h"
-#include "Edificio.h"
+#include "material.h"
+#include "edificio.h"
 #include <string>
 
 using namespace std;
 
 class Ciudad {
 
-    // Attributes
+    // Atributos
     private:
         Edificio** edificios;
         Material** materiales;
@@ -17,7 +17,7 @@ class Ciudad {
         int cantidadEdificios;
         int cantidadMateriales;
     
-    // Methods
+    // Metodos
     public:
 
         // PRE: Los parametros deben ser validos.
@@ -46,7 +46,7 @@ class Ciudad {
 
         // PRE:
         // POST: Consulta el edificio por nombre y disminuye en 1
-        bool borrarEdificio();
+        bool demolerEdificio();
 
         // PRE:
         // POST: Consulta por pantalla el nombre del Edificio y si existe retorna su posicion, de lo contrario -1.

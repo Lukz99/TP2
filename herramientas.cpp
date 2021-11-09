@@ -1,10 +1,11 @@
 #include "herramientas.h"
+#include "clear_screen.h"
 #include <iostream>
 
 using namespace std;
 
-void showMenu(){
-
+void mostrarMenu(){
+    cout << endl << "¡Bienvenido a Andypolis!" << endl;
     cout << endl << " -------- Menu Principal -------- " << endl << endl;
     cout << "1. Construir edificio por nombre." << endl;
     cout << "2. Listar los edificios construidos." << endl;
@@ -19,25 +20,36 @@ void showMenu(){
 }
 
 void selectedOption(Ciudad &Ciudad, int opcion){
+    system(CLR_SCREEN);
     switch (opcion) {
-        case 1:
+        case CONSTRUIR_EDIFICIO:
             Ciudad.agregarEdificio();
             break;
-        case 2:
+        case EDIFICIOS_CONSTRUIDOS:
             Ciudad.mostrarEdificiosConstruidos();
             break;
-        case 3:
+        case LISTAR_EDIFICIOS:
             Ciudad.mostrarEdificios();
             break;
-        case 4:
-            Ciudad.borrarEdificio();
+        case DEMOLER_EDIFICIO:
+            Ciudad.demolerEdificio();
             break;
-        case 5:
+        case MOSTRAR_MAPA:
             // FALTA: Ciudad.mostrarMapa();
-        case 6:
+        case CONSULTAR_COORDENADA:
             // FALTA: Ciudad.consultarCoordenada();
-        case 7:
+        case MOSTRAR_INVENTARIO:
             Ciudad.mostrarMateriales();
             break;
+        /*case RECOLECTAR_RECURSOS:
+            Ciudad.recolectarRecursos();
+            break;
+        case LLUVIA_RECURSOS:
+            Ciudad.lluviaDeRecursos();
+        case GUARDAR_Y_SALIR:
+            Ciudad.guardarYSalir();
+            break; */
+        default:
+            cout << "Error! Opción inválida." << endl;
     }
 }

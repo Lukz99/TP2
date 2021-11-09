@@ -8,12 +8,12 @@ using namespace std;
 
 class Material {
 
-    // Attributes
+    // Atributos
     private:
         string nombreMaterial;
         int cantidad;
 
-    // Methods
+    // Metodos
     public:
 
         // Precondiciones: Los parametros deben ser validos

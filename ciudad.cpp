@@ -1,4 +1,4 @@
-#include "Ciudad.h"
+#include "ciudad.h"
 #include <string>
 #include <fstream>
 
@@ -22,7 +22,8 @@ void Ciudad :: mostrarEdificiosConstruidos() {
     cout << endl << "--------------------" << endl << endl;
     cout << "Edificios construidos: " << endl;
 
-    if(! this -> cantidadEdificios) cout << "No hay edificios construidos :(" << endl;
+    if(! this -> cantidadEdificios)
+        cout << "No hay edificios construidos." << endl;
 
     for (int i = 0; i < this->cantidadEdificios; i++) {
         if (this -> edificios[i] -> verCantidad() > 0) {
@@ -69,7 +70,7 @@ bool Ciudad :: agregarEdificio() {
     return (confirmacion == "si");
 }
 
-bool Ciudad :: borrarEdificio(){
+bool Ciudad :: demolerEdificio(){
     string name, confirmacion;
     int posicion;
 
@@ -168,6 +169,7 @@ void Ciudad :: agregarMateriales (int posicion) {
 
 // Ciudad:: Crea un Array dinámico temporal para dimensionar el actual, reemplazandolo y borrandolo.
 void Ciudad :: crearEdificio(Edificio* edificio) {
+
     int cantidadEdificiosAnterior = this -> cantidadEdificios;
 
     Edificio** nuevoEdificio = new Edificio* [cantidadEdificiosAnterior + 1];
@@ -186,6 +188,7 @@ void Ciudad :: crearEdificio(Edificio* edificio) {
 }
 
 void Ciudad:: crearMaterial(Material* material) {
+
     int cantidadMaterialesAnterior = this -> cantidadMateriales;
 
     Material** nuevoMaterial = new Material* [cantidadMaterialesAnterior + 1];
@@ -196,33 +199,42 @@ void Ciudad:: crearMaterial(Material* material) {
 
     nuevoMaterial[cantidadMaterialesAnterior] = material;
 
-    if (this -> cantidadMateriales != 0) delete[] this -> materiales;
-
+    if (this -> cantidadMateriales != 0)
+        delete[] this -> materiales;
 
     this -> materiales = nuevoMaterial;
     this -> cantidadMateriales++;
 }
 
 void Ciudad :: cargarEdificios (string rutaArchivo) {
-    ifstream archivo(rutaArchivo);
-    string nombreEdificio;
-    int piedra, madera, metal, cantidad, maximo;
 
-    while (archivo >> nombreEdificio >> piedra >> madera >> metal >> cantidad >> maximo) {
-        crearEdificio(new Edificio(nombreEdificio, piedra, madera, metal, cantidad, maximo));
+    ifstream archivo(rutaArchivo);
+
+    string nombreEdificio;
+    int piedra, madera, metal, maximo;
+
+    while (archivo >> nombreEdificio >> piedra >> madera >> metal >> maximo) {
+        crearEdificio(new Edificio(nombreEdificio, piedra, madera, metal, maximo));
    }
 
     archivo.close();
 }
 
 void Ciudad :: cargarMateriales(string rutaArchivo) {
+
     ifstream archivo(rutaArchivo);
+
     string nombreMaterial;
     int cantidad;
 
-    while(archivo >> nombreMaterial >> cantidad){
-        crearMaterial(new Material(nombreMaterial, cantidad));
+    if(!archivo)
+        cout << "Archivo no encontrado."<< endl;
+    else {
+        while(archivo >> nombreMaterial >> cantidad){
+            crearMaterial(new Material(nombreMaterial, cantidad));
+        }
     }
+
 
 	archivo.close();
 }
@@ -251,7 +263,7 @@ void Ciudad :: guardarEdificios(string rutaArchivo) {
             this -> edificios[i] -> verPiedra() << " " <<
             this -> edificios[i] -> verMadera() << " " <<
             this -> edificios[i] -> verMetal() << " " <<
-            this -> edificios[i] -> verCantidad() << " " <<                                                                                                                                        this -> edificios[i] -> getMax() << "\n";
+            this -> edificios[i] -> verMaximo() << "\n";
         delete this -> edificios[i];
     }
 

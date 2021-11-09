@@ -1,35 +1,33 @@
-#include "Ciudad.h"
-#include "herramientas.h"
 #include <iostream>
+#include "ciudad.h"
+#include "herramientas.h"
+
 
 using namespace std;
 
 const string PATH_MATERIALES = "../materiales.txt";
 const string PATH_EDIFICIOS = "../edificios.txt";
 const string PATH_UBICACIONES = "../ubicaciones.txt";
-const string PATH_MAPAS = "../mapa.txt";
-const int SALIR_Y_GUARDAR = 6;
+const string PATH_MAPA = "../mapa.txt";
 
 int main() {
 
     Ciudad Ciudad;
 
-    Ciudad.cargarEdificios(PATH_EDIFICIOS);
     Ciudad.cargarMateriales(PATH_MATERIALES);
-
-    cout << "Elija una opcion:" << endl;
+    Ciudad.cargarEdificios(PATH_EDIFICIOS);
 
     // Ingresar una opcion valida
     int opcion;
     do {
         mostrarMenu();
-        cout << "Opcion: ";
+        cout << "Ingrese una opción: ";
         cin >> opcion;
         opcionValida(Ciudad, opcion);
-    } while (opcion != SALIR_Y_GUARDAR);
+    } while (opcion != GUARDAR_Y_SALIR);
 
-    Ciudad.guardarEdificios(PATH_EDIFICIOS);
-    Ciudad.guardarMateriales(PATH_MATERIALES);
+    Ciudad.guardarEdificios(PATH_EDIFICIOS); //habria que agregarlos a una unica funcion
+    Ciudad.guardarMateriales(PATH_MATERIALES); //habria que agregarlos a una unica funcion
 
     return 0;
 }
