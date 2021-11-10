@@ -17,7 +17,7 @@ void Ciudad :: mostrarMateriales(){
     }
     cout << endl << "--------------------" << endl << endl;
 }
-
+/* ARREGLAR COMO VEMOS LA CANTIDAD DE EDIFICIOS
 void Ciudad :: mostrarEdificiosConstruidos() {
     cout << endl << "--------------------" << endl << endl;
     cout << "Edificios construidos: " << endl;
@@ -33,7 +33,8 @@ void Ciudad :: mostrarEdificiosConstruidos() {
     }
     cout << endl << "--------------------" << endl << endl;
 }
-
+ */
+/*
 void Ciudad :: mostrarEdificios() {
     cout << endl << "--------------------" << endl << endl;
     cout << "Edificios: " << endl;
@@ -46,6 +47,7 @@ void Ciudad :: mostrarEdificios() {
     }
     cout << "--------------------" << endl << endl;
 }
+
 
 bool Ciudad :: agregarEdificio() {
     string nombre, confirmacion;
@@ -140,7 +142,7 @@ bool Ciudad :: puedeConstruirseSegunMaximo (int posicion) {
     if (!condicion) cout << "Error: Este edificio ya se construyo lo maximo permitido en la ciudad" << endl;
     return condicion;
 }
-
+*/
 void Ciudad :: borrarMateriales(int posicion) {
     for (int i = 0; i < this-> cantidadMateriales; i++){
         if (this ->materiales[i] -> verNombreMaterial() == "piedra")
@@ -186,6 +188,7 @@ void Ciudad :: crearEdificio(Edificio* edificio) {
     this -> cantidadEdificios++;
 
 }
+
 
 void Ciudad:: crearMaterial(Material* material) {
 

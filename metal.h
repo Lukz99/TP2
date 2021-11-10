@@ -1,6 +1,6 @@
 #ifndef METAL_H
 #define METAL_H
-#include "materiales.h"
+#include "material.h"
 
 class Metal : public Material {
     //Atributos

@@ -1,5 +1,6 @@
 #include "herramientas.h"
 #include "clear_screen.h"
+#include "ciudad.h"
 #include <iostream>
 
 using namespace std;
@@ -19,20 +20,20 @@ void mostrarMenu(){
     cout << "10. Guardar y salir." << endl;
 }
 
-void selectedOption(Ciudad &Ciudad, int opcion){
-    system(CLR_SCREEN);
+void opcionValida(Ciudad &Ciudad, int opcion){
+    //system(CLR_SCREEN);
     switch (opcion) {
         case CONSTRUIR_EDIFICIO:
-            Ciudad.agregarEdificio();
+            //Ciudad.agregarEdificio();
             break;
         case EDIFICIOS_CONSTRUIDOS:
-            Ciudad.mostrarEdificiosConstruidos();
+            //Ciudad.mostrarEdificiosConstruidos();
             break;
         case LISTAR_EDIFICIOS:
-            Ciudad.mostrarEdificios();
+            //Ciudad.mostrarEdificios();
             break;
         case DEMOLER_EDIFICIO:
-            Ciudad.demolerEdificio();
+            //Ciudad.demolerEdificio();
             break;
         case MOSTRAR_MAPA:
             // FALTA: Ciudad.mostrarMapa();
@@ -49,6 +50,8 @@ void selectedOption(Ciudad &Ciudad, int opcion){
         case GUARDAR_Y_SALIR:
             Ciudad.guardarYSalir();
             break; */
+        case GUARDAR_Y_SALIR:
+            break; //TEMPORAL
         default:
             cout << "Error! Opción inválida." << endl;
     }

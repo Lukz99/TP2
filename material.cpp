@@ -31,5 +31,5 @@ void Material :: decrementarCantidad() {
 }
 
 void Material :: decrementarCantidad(int cantidad) {
-    this -> cantidad -= cantidad;
-
+    this->cantidad -= cantidad;
+}

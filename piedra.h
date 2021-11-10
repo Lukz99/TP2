@@ -1,6 +1,6 @@
 #ifndef PIEDRA_H
 #define PIEDRA_H
-#include "materiales.h"
+#include "material.h"
 
 class Piedra : public Material {
     //Atributos

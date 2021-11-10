@@ -1,13 +1,13 @@
 #ifndef MADERA_H
 #define MADERA_H
-#include "materiales.h"
+#include "material.h"
 
 class Madera : public Material {
     //Atributos
 private:
 
 public:
-    Madera(std::string nombre_material, int cantidad_material);
+    Madera(std::string nombreMaterial, int cantidadMaterial);
 
     void mostrar();
 };
