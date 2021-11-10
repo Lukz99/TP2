@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ciudad.h"
 #include "herramientas.h"
+#include "mapa.h"
 
 
 using namespace std;
@@ -17,7 +18,10 @@ int main() {
     Ciudad.cargarMateriales(PATH_MATERIALES);
     Ciudad.cargarEdificios(PATH_EDIFICIOS);
     Ciudad.cargarUbicaciones(PATH_UBICACIONES);
-    Ciudad.cargarMapa(PATH_MAPA);
+
+    Mapa mapa;
+    mapa.cargarMapa(PATH_MAPA);
+    // Ciudad.cargarMapa(PATH_MAPA); NO VA MAS
 
     // Ingresar una opcion valida
     int opcion;

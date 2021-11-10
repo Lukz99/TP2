@@ -240,36 +240,6 @@ void Ciudad :: cargarMateriales(string rutaArchivo) {
 	archivo.close();
 }
 
-
-void Ciudad :: cargarMapa(string rutaArchivo) {
-
-    int filas, columnas;
-    string terreno;
-    string mapa;
-    string linea;
-
-    ifstream archivo(rutaArchivo);
-
-    archivo >> filas >> columnas;
-    string matriz[filas + 1][columnas + 1];
-
-    if (!archivo)
-        cout << "Archivo mapa no encontrado" << endl;
-    else {
-
-        for (int i = 1; i <= filas; i++) {
-            for (int j = 1; j <= columnas; j++) {
-                archivo >> terreno;
-                matriz[i][j] = terreno;
-                //cout << "|||| fila: " << i << " | columna: " << j << " |contenido: " << matriz[i][j] << endl << endl;
-            }
-        }
-
-    }
-
-
-}
-
 void Ciudad ::cargarUbicaciones(string rutaArchivo) {
     ifstream archivo(rutaArchivo);
 
