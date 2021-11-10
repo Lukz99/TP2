@@ -84,6 +84,8 @@ class Ciudad {
         // POST: Guarda cada linea en un objeto Material.
         void cargarMateriales(string rutaArchivo);
 
+        // PRE: Recibe una ruta de archivo valida.
+        // POST: ?
         void cargarMapa(string rutaArchivo);
 
         void cargarUbicaciones(string rutaArchivo);

@@ -36,7 +36,7 @@ void opcionValida(Ciudad &Ciudad, int opcion){
             //Ciudad.demolerEdificio();
             break;
         case MOSTRAR_MAPA:
-            // FALTA: Ciudad.mostrarMapa();
+            //Ciudad.mostrarMapa();
         case CONSULTAR_COORDENADA:
             // FALTA: Ciudad.consultarCoordenada();
         case MOSTRAR_INVENTARIO:
