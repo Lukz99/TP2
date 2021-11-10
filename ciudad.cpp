@@ -11,9 +11,9 @@ Ciudad :: Ciudad(){
 
 void Ciudad :: mostrarMateriales(){
     cout << endl << "--------------------" << endl << endl;
-    cout << "Materiales de construccion: " << endl;
+    cout << "Materiales de construcción: " << endl;
     for (int i = 0; i < this -> cantidadMateriales; i++) {
-        cout << "# " << this -> materiales[i]-> verNombreMaterial() << " - " << this -> materiales[i] -> verCantidad() << endl;
+        cout << "- " << this -> materiales[i]-> verNombreMaterial() << " - " << this -> materiales[i] -> verCantidad() << endl;
     }
     cout << endl << "--------------------" << endl << endl;
 }
@@ -240,6 +240,15 @@ void Ciudad :: cargarMateriales(string rutaArchivo) {
 
 
 	archivo.close();
+}
+void Ciudad :: cargarMapa(string rutaArchivo) {
+    ifstream archivo(rutaArchivo);
+
+}
+
+void Ciudad ::cargarUbicaciones(string rutaArchivo) {
+    ifstream archivo(rutaArchivo);
+
 }
 
 int Ciudad :: verCantidadEdificios() {

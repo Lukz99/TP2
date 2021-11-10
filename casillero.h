@@ -7,13 +7,10 @@ protected:
     int fila;
     int columna;
 
-
     //Metodos
 public:
     virtual void tipo_casillero() = 0;
-
-
-
+    Casillero(int fila, int columna);
 };
 
 

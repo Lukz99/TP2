@@ -6,7 +6,7 @@
 using namespace std;
 
 void mostrarMenu(){
-    cout << endl << "¡Bienvenido a Andypolis!" << endl;
+    cout << endl << '\t' << "¡Bienvenido a Andypolis!" << endl;
     cout << endl << " -------- Menu Principal -------- " << endl << endl;
     cout << "1. Construir edificio por nombre." << endl;
     cout << "2. Listar los edificios construidos." << endl;

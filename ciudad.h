@@ -84,6 +84,10 @@ class Ciudad {
         // POST: Guarda cada linea en un objeto Material.
         void cargarMateriales(string rutaArchivo);
 
+        void cargarMapa(string rutaArchivo);
+
+        void cargarUbicaciones(string rutaArchivo);
+
         // PRE:
         // POST: Retorna la cantidad de Edificios.
         int verCantidadEdificios();

@@ -1,1 +1,1 @@
-#include "Escuela.h"
+#include "escuela.h"

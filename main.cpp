@@ -16,18 +16,20 @@ int main() {
 
     Ciudad.cargarMateriales(PATH_MATERIALES);
     Ciudad.cargarEdificios(PATH_EDIFICIOS);
+    Ciudad.cargarUbicaciones(PATH_UBICACIONES);
+    Ciudad.cargarMapa(PATH_MAPA);
 
     // Ingresar una opcion valida
     int opcion;
     do {
         mostrarMenu();
-        cout << "Ingrese una opción: ";
+        cout << endl << "Ingrese una opción: ";
         cin >> opcion;
         opcionValida(Ciudad, opcion);
     } while (opcion != GUARDAR_Y_SALIR);
 
-    Ciudad.guardarEdificios(PATH_EDIFICIOS); //habria que agregarlos a una unica funcion
     Ciudad.guardarMateriales(PATH_MATERIALES); //habria que agregarlos a una unica funcion
+    Ciudad.guardarEdificios(PATH_EDIFICIOS); //habria que agregarlos a una unica funcion
 
     return 0;
 }
