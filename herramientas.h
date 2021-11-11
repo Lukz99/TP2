@@ -2,6 +2,7 @@
 #define HERRAMIENTAS_H
 
 #include "ciudad.h"
+#include "mapa.h"
 
 const int CONSTRUIR_EDIFICIO = 1;
 const int OPCION_MINIMA = 1;
@@ -20,8 +21,8 @@ const int OPCION_MAXIMA = 10;
 // Postcondiciones: Imprime el menu en pantalla.
 void mostrarMenu();
 
-// Precondiciones: Recibe la Ciudad y una opcion
+// Precondiciones: Recibe la Ciudad, un Mapa y una opcion
 // Postcondiciones: Devuelve True si la opcion es valida y llama al metodo correspondiente
-void opcionValida(Ciudad &Ciudad, int opcion);
+void opcionValida(Ciudad &Ciudad, Mapa &Mapa, int opcion);
 
 #endif

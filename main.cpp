@@ -14,26 +14,26 @@ const string PATH_MAPA = "../mapa.txt";
 int main() {
 
     Ciudad Ciudad;
+    Mapa mapa;
 
     Ciudad.cargarMateriales(PATH_MATERIALES);
     Ciudad.cargarEdificios(PATH_EDIFICIOS);
-    Ciudad.cargarUbicaciones(PATH_UBICACIONES);
+    Ciudad.cargarUbicaciones2(PATH_UBICACIONES);
 
-    Mapa mapa;
-    mapa.cargarMapa(PATH_MAPA);
+    mapa.cargarMapa(PATH_MAPA,0);
     // Ciudad.cargarMapa(PATH_MAPA); NO VA MAS
 
     // Ingresar una opcion valida
     int opcion;
     do {
         mostrarMenu();
-        cout << endl << "Ingrese una opción: ";
+        cout << endl << "Ingrese una opcion: ";
         cin >> opcion;
-        opcionValida(Ciudad, opcion);
+        opcionValida(Ciudad, mapa, opcion);
     } while (opcion != GUARDAR_Y_SALIR);
 
-    Ciudad.guardarMateriales(PATH_MATERIALES); //habria que agregarlos a una unica funcion
-    Ciudad.guardarEdificios(PATH_EDIFICIOS); //habria que agregarlos a una unica funcion
+    Ciudad.guardarMateriales(PATH_MATERIALES);
+    Ciudad.guardarEdificios(PATH_EDIFICIOS);
 
     return 0;
 }

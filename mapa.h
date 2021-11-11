@@ -18,7 +18,6 @@ public:
 
     // PRE: Los parametros deben ser validos.
     // POST: Crea un objeto Mapa.
-    //Mapa(std::string matrizMapa[filas][columnas]);
     Mapa();
 
     // PRE:
@@ -27,7 +26,7 @@ public:
 
     // PRE: Recibe una ruta de archivo valida.
     // POST: Se carga el mapa
-    void cargarMapa(std::string rutaArchivo);
+    void cargarMapa(std::string rutaArchivo, int menu);
 
     // PRE: Ninguna
     // POST: Imprime por pantalla el mapa

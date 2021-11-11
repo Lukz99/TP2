@@ -34,21 +34,21 @@ void Ciudad :: mostrarEdificiosConstruidos() {
     cout << endl << "--------------------" << endl << endl;
 }
  */
-/*
+
 void Ciudad :: mostrarEdificios() {
     cout << endl << "--------------------" << endl << endl;
     cout << "Edificios: " << endl;
 
     for(int i = 0; i < this->cantidadEdificios; i++){
         cout << "-> " << (i+1) << ": " << this -> edificios[i] -> verNombreEdificio() << endl;
-        cout << "Construidos: " << this -> edificios[i]-> verCantidad() << " (";
-        cout << (this -> edificios[i] -> verMaximo() - this -> edificios[i] -> verCantidad()) << " para el maximo permitido) " << endl;
+        //cout << "Construidos: " << this -> edificios[i]-> verCantidad() << " (";
+        //cout << (this -> edificios[i] -> verMaximo() - this -> edificios[i] -> verCantidad()) << " para el maximo permitido) " << endl;
         cout << endl;
     }
     cout << "--------------------" << endl << endl;
 }
 
-
+/*
 bool Ciudad :: agregarEdificio() {
     string nombre, confirmacion;
     int posicion;
@@ -143,6 +143,7 @@ bool Ciudad :: puedeConstruirseSegunMaximo (int posicion) {
     return condicion;
 }
 */
+
 void Ciudad :: borrarMateriales(int posicion) {
     for (int i = 0; i < this-> cantidadMateriales; i++){
         if (this ->materiales[i] -> verNombreMaterial() == "piedra")
@@ -214,7 +215,7 @@ void Ciudad :: cargarEdificios (string rutaArchivo) {
     ifstream archivo(rutaArchivo);
 
     string nombreEdificio;
-    int piedra, madera, metal, maximo;
+    int piedra, madera, metal, maximo, cantidad;
 
     while (archivo >> nombreEdificio >> piedra >> madera >> metal >> maximo) {
         crearEdificio(new Edificio(nombreEdificio, piedra, madera, metal, maximo));
@@ -240,10 +241,56 @@ void Ciudad :: cargarMateriales(string rutaArchivo) {
 	archivo.close();
 }
 
-void Ciudad ::cargarUbicaciones(string rutaArchivo) {
+void Ciudad :: cargarUbicaciones2 (string rutaArchivo) {
+    int cantidadEscuela, cantidadObelisco, cantidadFabrica, cantidadAserradero, cantidadMina, cantidadPlantaElectrica;
     ifstream archivo(rutaArchivo);
+    string nombre;
 
+    while (archivo >> nombre) {
+        if (nombre == "planta") {
+            //auxiliar2 = nombre;
+            //archivo >> nombre >> fila >> columna;
+            cantidadEscuela = cantidadEscuela + 1;
+        } else if (nombre == "obelisco") {
+            cantidadObelisco += 1;
+        } else if (nombre == "fabrica") {
+            cantidadFabrica += 1;
+        } else if (nombre == "aserradero") {
+            cantidadAserradero += 1;
+        }  else if (nombre == "mina") {
+             cantidadMina += 1;
+        } else if (nombre == "planta") {
+             cantidadPlantaElectrica += 1;
+        }
+    }
+    archivo.close();
 }
+
+
+
+void Ciudad :: cargarUbicaciones (string rutaArchivo) {
+
+    ifstream archivo(rutaArchivo);
+    string nombreEdificio, auxiliar;
+    int fila, columna;
+
+    while (archivo >> nombreEdificio) {
+        if (nombreEdificio == "planta") {
+            //cout << "nombreEdificio es planta" << endl;
+            auxiliar = nombreEdificio;
+            archivo >> nombreEdificio;
+            //cout << "auxiliar es planta (  -> " << auxiliar << "   ) y nombreEdificio es ->" << nombreEdificio << endl;
+            nombreEdificio = auxiliar + " " +  nombreEdificio;
+            //cout << "nombre completo queda: -> " << nombreEdificio << endl << "fin" << endl;
+    }   else {
+        archivo >> fila >> columna;
+        cout << nombreEdificio <<"fila: " << fila << "|  columna: " << columna;
+        }
+    }
+
+    archivo.close();
+}
+
 
 int Ciudad :: verCantidadEdificios() {
     return this -> cantidadEdificios;
@@ -256,6 +303,7 @@ int Ciudad :: verCantidadMateriales() {
 Edificio* Ciudad :: edificioPorPosicion(int posicion) {
     return this -> edificios[posicion];
 }
+
 
 Material* Ciudad :: verMaterialPorPosicion(int posicion) {
     return this -> materiales[posicion];

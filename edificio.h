@@ -15,6 +15,7 @@ class Edificio {
         int madera;
         int metal;
         int maximo;
+        int cantidad;
 
     // Metodos
     public:

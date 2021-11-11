@@ -37,7 +37,7 @@ class Ciudad {
         void mostrarEdificiosConstruidos();
 
         // PRE:
-        // POST: Imprime una lista de Edificios en pantalla.
+        // POST: Imprime por pantalla todos los edificios
         void mostrarEdificios();
 
         // PRE:
@@ -84,10 +84,9 @@ class Ciudad {
         // POST: Guarda cada linea en un objeto Material.
         void cargarMateriales(string rutaArchivo);
 
-
-
-
         void cargarUbicaciones(string rutaArchivo);
+
+        void cargarUbicaciones2(string rutaArchivo);
 
         // PRE:
         // POST: Retorna la cantidad de Edificios.

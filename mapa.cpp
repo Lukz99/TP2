@@ -13,17 +13,15 @@ Mapa :: Mapa() {}
 
 Mapa :: ~Mapa() {}
 
-void Mapa :: cargarMapa(string rutaArchivo) {
+void Mapa :: cargarMapa(string rutaArchivo, int menu) {
 
     string terreno;
-    string mapa; //NO SE ESTAN USANDO
-    string linea; // NO SE ESTAN USANDO
-
 
     ifstream archivo(rutaArchivo);
 
     archivo >> filas >> columnas;
     string matriz[filas + 1][columnas + 1];
+    string matrizEntera;
 
     if (!archivo)
         cout << "Archivo mapa no encontrado" << endl;
@@ -32,12 +30,18 @@ void Mapa :: cargarMapa(string rutaArchivo) {
             for (int j = 1; j <= columnas; j++) {
                 archivo >> terreno;
                 matriz[i][j] = terreno;
-                cout << "|||| fila: " << i << " | columna: " << j << " |contenido: " << matriz[i][j] << endl << endl;
             }
         }
-
     }
 
+    if (menu == 1) {
+        for (int i = 1; i <= filas; i++) {
+            cout << endl;
+            for (int j = 1; j <= columnas; j++) {
+                cout << matriz[i][j] << " ";
+            }
+        }
+    }
 }
 
 void Mapa :: mostrarMapa() {
